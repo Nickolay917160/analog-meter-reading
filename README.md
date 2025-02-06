@@ -57,7 +57,6 @@ def evaluate_model(model, X_train, X_test, y_train, y_test):
 
 4. Сравнение моделей
 Функция compare_models сравнивает несколько алгоритмов регрессии и возвращает их метрики производительности.
-
 def compare_models(X_train, X_test, y_train, y_test):
     """
     Сравнивает несколько алгоритмов регрессии.
