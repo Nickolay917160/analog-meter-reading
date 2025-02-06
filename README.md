@@ -24,6 +24,7 @@
 Структура пайплайна
 1. Загрузка данных
 Функция load_data загружает данные из указанных CSV-файлов и объединяет их в один DataFrame. Также она разделяет признаки и целевые значения.
+
 def load_data(base_path, data_files, target_files, nrows=10000):
     """
     Загружает и объединяет данные из нескольких CSV-файлов.
@@ -36,6 +37,7 @@ def load_data(base_path, data_files, target_files, nrows=10000):
 
 2. Разделение данных
 Функция split_data разделяет данные на обучающую и тестовую выборки.
+
 def split_data(data, target, test_size=0.2, random_state=42):
     """
     Разделяет данные на обучающую и тестовую выборки.
@@ -47,6 +49,7 @@ def split_data(data, target, test_size=0.2, random_state=42):
     """
 3. Оценка модели
 Функция evaluate_model обучает заданную модель и оценивает её производительность с использованием метрик, таких как R², RMSE и улучшение над базовым уровнем.
+
 def evaluate_model(model, X_train, X_test, y_train, y_test):
     """
     Обучает и оценивает модель машинного обучения.
@@ -57,6 +60,7 @@ def evaluate_model(model, X_train, X_test, y_train, y_test):
 
 4. Сравнение моделей
 Функция compare_models сравнивает несколько алгоритмов регрессии и возвращает их метрики производительности.
+
 def compare_models(X_train, X_test, y_train, y_test):
     """
     Сравнивает несколько алгоритмов регрессии.
@@ -65,6 +69,7 @@ def compare_models(X_train, X_test, y_train, y_test):
     """
 5. Полный пайплайн
 Функция pipeline управляет всем процессом, от загрузки данных до выбора и оценки лучшей модели.
+
 def pipeline(base_path, data_files, target_files, nrows=10000):
     """
     Пайплайн для обучения и оценки моделей регрессии.
